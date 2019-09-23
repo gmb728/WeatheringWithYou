@@ -13,6 +13,7 @@
 		DD1F65A023364E2700AB12D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1F659E23364E2700AB12D0 /* Main.storyboard */; };
 		DD1F65A223364E2D00AB12D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD1F65A123364E2D00AB12D0 /* Assets.xcassets */; };
 		DD1F65A523364E2D00AB12D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD1F65A323364E2D00AB12D0 /* LaunchScreen.storyboard */; };
+		DD1F65B12336581800AB12D0 /* PraySunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1F65B02336581800AB12D0 /* PraySunnyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DD1F65A123364E2D00AB12D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD1F65A423364E2D00AB12D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD1F65A623364E2D00AB12D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD1F65B02336581800AB12D0 /* PraySunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraySunnyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				DD1F659A23364E2700AB12D0 /* SceneDelegate.swift */,
 				DD1F659C23364E2700AB12D0 /* ViewController.swift */,
 				DD1F659E23364E2700AB12D0 /* Main.storyboard */,
+				DD1F65B02336581800AB12D0 /* PraySunnyViewController.swift */,
 				DD1F65A123364E2D00AB12D0 /* Assets.xcassets */,
 				DD1F65A323364E2D00AB12D0 /* LaunchScreen.storyboard */,
 				DD1F65A623364E2D00AB12D0 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1F65B12336581800AB12D0 /* PraySunnyViewController.swift in Sources */,
 				DD1F659D23364E2700AB12D0 /* ViewController.swift in Sources */,
 				DD1F659923364E2700AB12D0 /* AppDelegate.swift in Sources */,
 				DD1F659B23364E2700AB12D0 /* SceneDelegate.swift in Sources */,

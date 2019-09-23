@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WGF-68-BRi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,204 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatheringWithYou" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20190918-weather-7" translatesAutoresizingMaskIntoConstraints="NO" id="h1j-OV-DVf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qsg-bj-N4i">
+                                <rect key="frame" x="40" y="128" width="812" height="641.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt; I wish for sunny day for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8g-Xq-kja">
+                                        <rect key="frame" x="0.0" y="0.0" width="812" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ytd-gi-hLQ">
+                                        <rect key="frame" x="0.0" y="34" width="812" height="34"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="sunnyTextfieldAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Csp-vF-H3J"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt; I would like to book the date is " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN6-yx-CnC">
+                                        <rect key="frame" x="0.0" y="78" width="812" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6x-n5-noc">
+                                        <rect key="frame" x="0.0" y="112" width="812" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bXG-zJ-1ea">
+                                        <rect key="frame" x="0.0" y="172" width="812" height="216"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-952001999">
+                                            <!--1970-11-01 11:00:01 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="sunnyDatePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZHa-AZ-6Dy"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;My budge for parying sunny date is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFF-Iq-LG1">
+                                        <rect key="frame" x="0.0" y="398" width="812" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FX8-7o-EAu">
+                                        <rect key="frame" x="0.0" y="433.5" width="812" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="m06-AS-mc4">
+                                        <rect key="frame" x="-2" y="493.5" width="816" height="31"/>
+                                        <connections>
+                                            <action selector="budgetSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="S5K-zd-NY9"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49v-a2-e1a">
+                                        <rect key="frame" x="0.0" y="533.5" width="812" height="108"/>
+                                        <state key="normal" image="doll"/>
+                                        <connections>
+                                            <action selector="reserveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNJ-fp-AxT"/>
+                                            <segue destination="S7Y-RZ-f7w" kind="show" id="kBu-PF-gvq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h1j-OV-DVf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6tx-jJ-OVE"/>
+                            <constraint firstItem="qsg-bj-N4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="AMW-OB-goG"/>
+                            <constraint firstItem="h1j-OV-DVf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E4O-Da-bUT"/>
+                            <constraint firstItem="qsg-bj-N4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="UU7-Py-uvK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h1j-OV-DVf" secondAttribute="bottom" id="YsO-vX-z6I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h1j-OV-DVf" secondAttribute="trailing" id="xIT-Hc-4j2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uso-sh-VrM"/>
+                    <connections>
+                        <outlet property="budgetLabel" destination="FX8-7o-EAu" id="0Pb-An-Frc"/>
+                        <outlet property="dateLabel" destination="z6x-n5-noc" id="mFV-eN-ru4"/>
+                        <outlet property="reserveButton" destination="49v-a2-e1a" id="enq-sG-i3N"/>
+                        <outlet property="sunnyDatePicker" destination="bXG-zJ-1ea" id="wPn-KR-Eee"/>
+                        <outlet property="sunnySlider" destination="m06-AS-mc4" id="grj-Uq-K5b"/>
+                        <outlet property="sunnyTextfield" destination="Ytd-gi-hLQ" id="8IV-eg-Ytd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="112.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a8N-3k-b4A">
+            <objects>
+                <viewController id="S7Y-RZ-f7w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7zc-Rm-F9P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pray" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-oX-G3p">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pak-HC-YbQ">
+                                <rect key="frame" x="20" y="76" width="374" height="775"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="Hho-B4-e1b" kind="show" id="tFe-EC-Oyc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kdv-oX-G3p" firstAttribute="top" secondItem="gWl-az-37t" secondAttribute="top" id="CKz-a1-2Xc"/>
+                            <constraint firstItem="gWl-az-37t" firstAttribute="bottom" secondItem="Kdv-oX-G3p" secondAttribute="bottom" id="efl-VC-ksK"/>
+                            <constraint firstItem="Kdv-oX-G3p" firstAttribute="trailing" secondItem="gWl-az-37t" secondAttribute="trailing" id="giM-8E-dQd"/>
+                            <constraint firstItem="Kdv-oX-G3p" firstAttribute="leading" secondItem="gWl-az-37t" secondAttribute="leading" id="so0-HX-qgU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gWl-az-37t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acH-cx-yHb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="113"/>
+        </scene>
+        <!--Pray Sunny View Controller-->
+        <scene sceneID="ZeB-GB-Wg6">
+            <objects>
+                <viewController id="Hho-B4-e1b" customClass="PraySunnyViewController" customModule="WeatheringWithYou" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jsc-MT-99o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunny" translatesAutoresizingMaskIntoConstraints="NO" id="CeQ-dr-f2A">
+                                <rect key="frame" x="0.0" y="88" width="414" height="291"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rainning" translatesAutoresizingMaskIntoConstraints="NO" id="5MI-6X-7FH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="291"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="291" id="xrI-kp-9Tf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5MI-6X-7FH" firstAttribute="bottom" secondItem="CeQ-dr-f2A" secondAttribute="bottom" id="Bko-Ta-tYU"/>
+                            <constraint firstItem="5MI-6X-7FH" firstAttribute="leading" secondItem="aIq-s8-Akc" secondAttribute="leading" id="HW2-d4-krl"/>
+                            <constraint firstItem="5MI-6X-7FH" firstAttribute="centerX" secondItem="jsc-MT-99o" secondAttribute="centerX" id="aJW-XR-7xP"/>
+                            <constraint firstItem="5MI-6X-7FH" firstAttribute="top" secondItem="CeQ-dr-f2A" secondAttribute="top" id="g1i-BZ-ULV"/>
+                            <constraint firstItem="5MI-6X-7FH" firstAttribute="trailing" secondItem="CeQ-dr-f2A" secondAttribute="trailing" id="jDr-sV-DTf"/>
+                            <constraint firstItem="5MI-6X-7FH" firstAttribute="leading" secondItem="CeQ-dr-f2A" secondAttribute="leading" id="jYF-lV-sGL"/>
+                            <constraint firstItem="5MI-6X-7FH" firstAttribute="top" secondItem="aIq-s8-Akc" secondAttribute="top" id="mKX-uv-uUr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aIq-s8-Akc"/>
+                    </view>
+                    <connections>
+                        <outlet property="prayImageView" destination="Kdv-oX-G3p" id="bPq-O2-dok"/>
+                        <outlet property="rainningImageView" destination="5MI-6X-7FH" id="tjR-do-o96"/>
+                        <outlet property="sunnyImageView" destination="CeQ-dr-f2A" id="PgH-4D-ZdT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztx-Uv-Jv5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2518.840579710145" y="102.45535714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n4h-yR-PdQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WGF-68-BRi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VTV-HB-e95">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QSS-Uc-cf3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBk-vr-tbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="20190918-weather-7" width="672" height="960"/>
+        <image name="doll" width="100" height="108"/>
+        <image name="pray" width="600" height="750"/>
+        <image name="rainning" width="1920" height="1080"/>
+        <image name="sunny" width="1200" height="675"/>
+    </resources>
 </document>
